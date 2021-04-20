@@ -1,12 +1,12 @@
 //import logo from './logo.svg';
 import './App.css';
 import Unity, { UnityContext } from 'react-unity-webgl'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 
 function App() {
   const [progression, setProgression] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
+  //const [isLoading, setIsLoading] = useState(true)
   //const [didError, setDidError] = useState(false)
   //const [errorMessage, setErrorMessage] = useState("")
 
@@ -22,12 +22,6 @@ function App() {
     setProgression(progression)
     
   })
-
-  unityContext.on('loaded', () => {
-    setIsLoading(false)
-    console.log(progression)
-  })
-  
  
   return (
       <div className='App'>
